@@ -4,12 +4,13 @@ import {fetchUsers} from '../redux/User/userActions'
 const UserContainer = () => {
     const userData = useSelector(state => state.user)
     const dispatch = useDispatch()
+    console.log("from usercontainer",userData);
  useEffect(()=>{
      dispatch(fetchUsers())
  },[])
  
 return userData.loading?<div>loading</div>:userData.error?<div>{userData.error}</div>:(<div>
-    {userData.users.map(user =><p>{user.name}</p>)}
+    {userData.users.length>0&&userData.users.map(user =><p>{user.name}</p>)}
 </div>)
  
 }

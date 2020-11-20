@@ -7,11 +7,15 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 import allCombinedReducers from './reducers/allCombinedReducers'
+import createSagaMiddleware from 'redux-saga'
+import rootSaga from './cakeshop_container/sagas/sagas'
+const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   allCombinedReducers,
-  applyMiddleware(thunk)
+  applyMiddleware(thunk,sagaMiddleware)
 )
 
+sagaMiddleware.run(rootSaga)
 ReactDOM.render(
   <Provider store={store}>
   

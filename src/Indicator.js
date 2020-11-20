@@ -8,7 +8,7 @@ const Indicator = () => {
             </Link>
             <br/>
             <Link to='/cake_shop'>
-                Cake shop app with Redux basic and Redux thunk for API call
+                Cake shop app with Redux basic and Redux saga for an API call
             </Link>
             <br/>
             <Link to='/simple_form'>
