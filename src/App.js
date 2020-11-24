@@ -3,12 +3,13 @@ import Indicator from './Indicator';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import MainContainer from './cakeshop_container/component/MainContainer'
+import MainFile from './saga_example/components/MainFile';
 import {
 
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 import InputForm from './simple_form_container/components/InputForm';
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route  path="/simple_form">
             <InputForm/>
+          </Route>
+          <Route  path="/saga_example">
+            <MainFile/>
           </Route>
         </Switch>
      </Router>

@@ -14,6 +14,10 @@ const Indicator = () => {
             <Link to='/simple_form'>
                Simple form submission with Redux 
             </Link>
+            <br/>
+            <Link to='/saga_example'>
+               Simple saga example with API calls
+            </Link>
 
         </div>
     );
