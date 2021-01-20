@@ -9,6 +9,8 @@ import {Provider} from 'react-redux';
 import allCombinedReducers from './reducers/allCombinedReducers'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './rootSaga'
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
   allCombinedReducers,
@@ -17,11 +19,13 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga)
 ReactDOM.render(
+  <I18nextProvider i18n={i18n}>
   <Provider store={store}>
   
     <App />
 
-  </Provider>,
+  </Provider>
+  </I18nextProvider>,
   document.getElementById('root')
 );
 

@@ -18,6 +18,10 @@ const Indicator = () => {
             <Link to='/saga_example'>
                Simple saga example with API calls
             </Link>
+            <br/>
+            <Link to='/translate'>
+               Simple translate app
+            </Link>
 
         </div>
     );
