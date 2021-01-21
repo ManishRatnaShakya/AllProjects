@@ -4,7 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import MainContainer from './cakeshop_container/component/MainContainer'
 import MainFile from './saga_example/components/MainFile';
-import TranslateApp from './TranslateApp/TranslateApp'
+import TranslateApp from './TranslateApp/TranslateApp';
+import SkeletonApp from './SkeletonApp/SkeletonApp'
 import {
 
   BrowserRouter as Router,
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route  path="/translate">
             <TranslateApp/>
+          </Route>
+          <Route  path="/skeleton">
+            <SkeletonApp/>
           </Route>
         </Switch>
      </Router>

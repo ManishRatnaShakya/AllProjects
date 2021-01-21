@@ -22,6 +22,10 @@ const Indicator = () => {
             <Link to='/translate'>
                Simple translate app
             </Link>
+            <br/>  
+            <Link to='/skeleton'>
+               Simple Skeleton example app
+            </Link>
 
         </div>
     );

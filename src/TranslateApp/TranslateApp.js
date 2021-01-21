@@ -3,11 +3,12 @@ import React from 'react';
 import { withTranslation, Trans } from 'react-i18next'
 
 class  App extends React.Component {
- 
-    state = {
+  constructor(props) {
+    super(props)
+    this.state = {
       value: "en"
     }
-  
+  }
 
   onLanguageHandle = (event) => {
     let newLang = event.target.value;
